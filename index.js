@@ -33,7 +33,8 @@ function sadInstaQuotes() {
     let index = randomNumberGenerator(sadQuotes); 
     shuffle(sadQuotes); 
 
-    return sadQuotes[index]; 
+    let output = sadQuotes[index];  
+    document.getElementById("quote").innerHTML= output; 
 }
 
 function happyInstaQuotes() {
@@ -44,7 +45,8 @@ function happyInstaQuotes() {
     let index = randomNumberGenerator(happyQuotes); 
     shuffle(happyQuotes); 
 
-    return happyQuotes[index]; 
+    let output = happyQuotes[index];  
+    document.getElementById("quote").innerHTML= output; 
 }
 
 function funnyInstaQuotes() {
@@ -56,7 +58,8 @@ function funnyInstaQuotes() {
     let index = randomNumberGenerator(funnyQuotes); 
     shuffle(funnyQuotes); 
 
-    return funnyQuotes[index];
+    let output = funnyQuotes[index];  
+    document.getElementById("quote").innerHTML= output; 
 
 }
 
@@ -68,8 +71,22 @@ function romanticInstaQuotes () {
 
     let index = randomNumberGenerator(romanticQuotes); 
     shuffle(romanticQuotes); 
-    return romanticQuotes[index];
+    
+    let output = romanticQuotes[index];  
+    document.getElementById("quote").innerHTML= output; 
 }
 
-console.log(happyInstaQuotes()); 
+function outputQuote() {
+    let a = document.getElementById("text_a").value;
+    
+    if (a == "happy") {
+        happyInstaQuotes(); 
+    }else if(a === "sad") {
+        sadInstaQuotes(); 
+    }else if (a === "love") {
+        romanticInstaQuotes(); 
+    }else if (a === "funny") {
+        funnyInstaQuotes(); 
+    }
+}
 
