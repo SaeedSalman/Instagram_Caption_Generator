@@ -77,15 +77,15 @@ function romanticInstaQuotes () {
 }
 
 function outputQuote() {
-    let a = document.getElementById("text_a").value;
+    let userInput = document.getElementById("text_a").value;
     
-    if (a == "happy") {
+    if (userInput == "happy") {
         happyInstaQuotes(); 
-    }else if(a === "sad") {
+    }else if(userInput === "sad") {
         sadInstaQuotes(); 
-    }else if (a === "love") {
+    }else if (userInput === "love") {
         romanticInstaQuotes(); 
-    }else if (a === "funny") {
+    }else if (userInput === "funny") {
         funnyInstaQuotes(); 
     }
 }
