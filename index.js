@@ -31,9 +31,9 @@ function sadInstaQuotes() {
     "Disappointed but not surprised",  "Wish I could turn back time"]; 
 
     let index = randomNumberGenerator(sadQuotes); 
-    shuffle(sadQuotes); 
+    let sad = shuffle(sadQuotes); 
 
-    let output = sadQuotes[index];  
+    let output = sad[index];  
     document.getElementById("quote").innerHTML= output; 
 }
 
@@ -43,9 +43,9 @@ function happyInstaQuotes() {
     "Last name ever, first name greatest", "One of the most effective ways to cheer yourself up is to cheer someone else up", "Life is too short to be anything but happy" ];
 
     let index = randomNumberGenerator(happyQuotes); 
-    shuffle(happyQuotes); 
+    let happy = shuffle(happyQuotes); 
 
-    let output = happyQuotes[index];  
+    let output = happy[index];  
     document.getElementById("quote").innerHTML= output; 
 }
 
@@ -56,9 +56,9 @@ function funnyInstaQuotes() {
     "For my new year's resolution, I gave up drinking... during the week" ]; 
 
     let index = randomNumberGenerator(funnyQuotes); 
-    shuffle(funnyQuotes); 
+    let funny = shuffle(funnyQuotes); 
 
-    let output = funnyQuotes[index];  
+    let output = funny[index];  
     document.getElementById("quote").innerHTML= output; 
 
 }
@@ -70,9 +70,9 @@ function romanticInstaQuotes () {
     "It all started with Netflix and Chill", "Hey, we clean up pretty well!"]; 
 
     let index = randomNumberGenerator(romanticQuotes); 
-    shuffle(romanticQuotes); 
+    let romantic = shuffle(romanticQuotes); 
     
-    let output = romanticQuotes[index];  
+    let output = romantic[index];  
     document.getElementById("quote").innerHTML= output; 
 }
 
