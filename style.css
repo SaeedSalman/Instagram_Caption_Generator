@@ -123,6 +123,7 @@ ul .speech.active{
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     border-radius:10px;
     font-size: 18px;
+    text-transform: lowercase;  
 }
 
 @media screen and (max-width: 1023px) {
