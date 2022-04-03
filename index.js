@@ -77,7 +77,7 @@ function romanticInstaQuotes () {
 }
 
 function outputQuote() {
-    let userInput = document.getElementById("text_a").value;
+    let userInput = document.getElementById("textBox").value;
     
     if (userInput == "happy") {
         happyInstaQuotes(); 

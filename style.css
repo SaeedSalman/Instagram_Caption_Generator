@@ -66,7 +66,7 @@ main .content{
   margin: -7px 5px 0 0;
   font-family: monospace;
 }
-.wrapper .buttons{
+main, .buttons{
   border-top: 1px solid #ccc;
 }
 .buttons .features{
@@ -115,4 +115,30 @@ ul .speech.active{
 .buttons button.loading{
   opacity: 0.7;
   pointer-events: none;
+}
+
+#textBox {
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1023px) {
+    
+.buttons, .features {
+    margin-top: 23px;
+    flex-flow: wrap column;
+    height: 180px;
+}
+
+main {
+    padding: 30px 12px 25px;
+    margin: 12px;
+}
+
+main header {
+    font-size: 33px;
+}
 }
