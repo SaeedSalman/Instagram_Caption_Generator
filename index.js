@@ -91,3 +91,14 @@ function outputQuote() {
     }
 }
 
+let quoteText = document.querySelector("#quote");
+let quoteButton = document.querySelector("button"); 
+let speechButton = document.querySelector(".speech"); 
+let synth = speechSynthesis;
+
+// The SpeechSynthesisUtterance is a web speech API that represent a speech request
+speechButton.addEventListener("click", ()=>{
+        let utterance = new SpeechSynthesisUtterance(`${quoteText.innerText}`);
+        synth.speak(utterance);
+        
+});
