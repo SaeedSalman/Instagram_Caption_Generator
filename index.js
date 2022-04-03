@@ -78,14 +78,15 @@ function romanticInstaQuotes () {
 
 function outputQuote() {
     let userInput = document.getElementById("textBox").value;
+    let result = userInput.toLowerCase()
     
-    if (userInput == "happy") {
+    if (result == "happy") {
         happyInstaQuotes(); 
-    }else if(userInput === "sad") {
+    }else if(result === "sad") {
         sadInstaQuotes(); 
-    }else if (userInput === "love") {
+    }else if (result === "love") {
         romanticInstaQuotes(); 
-    }else if (userInput === "funny") {
+    }else if (result === "funny") {
         funnyInstaQuotes(); 
     }
 }
