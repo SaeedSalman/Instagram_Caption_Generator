@@ -38,7 +38,7 @@ function sadInstaQuotes() {
 }
 
 function happyInstaQuotes() {
-    const happyQuotes = ["Vodka may not be the answer but it’s worth a shot", "Me, myself and I", "The way to get started is to quit talking and begin doing.", "Success is a collection of problems solved",
+    const happyQuotes = ["Me, myself and I", "The way to get started is to quit talking and begin doing.", "Success is a collection of problems solved",
     "Say yes to new adventures", "Be the type of person you want to meet", "Selfie in paradise", "A smile is a curve that sets everything straight", "The biggest adventure you can take is to live the life of your dreams",
     "Last name ever, first name greatest", "One of the most effective ways to cheer yourself up is to cheer someone else up", "Life is too short to be anything but happy" ];
 
@@ -50,7 +50,7 @@ function happyInstaQuotes() {
 }
 
 function funnyInstaQuotes() {
-    const funnyQuotes = ["My favorite exercise is a cross between a lunge and a crunch ... I call it lunch", "I need a six-month holiday, twice a year", "There are 16-year-olds competing at the Olympics and some of us (me) still push on pull doors",
+    const funnyQuotes = ["Vodka may not be the answer but it’s worth a shot", "My favorite exercise is a cross between a lunge and a crunch ... I call it lunch", "I need a six-month holiday, twice a year", "There are 16-year-olds competing at the Olympics and some of us (me) still push on pull doors",
     "Friday ... Our second-favorite F word", "Friends buy you lunch. Best friends eat your lunch", "First rule of Sundays: If you can’t reach it from your couch, you don’t need it", "You think nothing is impossible? Try getting me out of bed before 12 PM",
     "If you want to be sure that you never forget your wife’s birthday, just try forgetting it once", "I talk a lot, so I've learned to just tune myself out...", "I am running away from my responsibilities and it feels good", "I'm not superstitious, but I am a little stitious",
     "For my new year's resolution, I gave up drinking... during the week" ]; 
@@ -95,6 +95,7 @@ let quoteText = document.querySelector("#quote");
 let quoteButton = document.querySelector("button"); 
 let speechButton = document.querySelector(".speech"); 
 let synth = speechSynthesis;
+let copyButton = document.querySelector(".copy"); 
 
 // The SpeechSynthesisUtterance is a web speech API that represent a speech request
 speechButton.addEventListener("click", ()=>{
@@ -102,3 +103,9 @@ speechButton.addEventListener("click", ()=>{
         synth.speak(utterance);
         
 });
+
+//Function to copy quote into user's clipboard 
+copyButton.addEventListener("click", () => {
+    //writeText() property writes the specified text string to the system clipboard
+    navigator.clipboard.writeText(quoteText.innerText); 
+})
