@@ -89,14 +89,16 @@ function outputQuote() {
     let userInput = document.getElementById("textBox").value;
     let result = userInput.toLowerCase()                // Forces the userinput to be lowercase to ensure consistancy
     
-    if (result == "happy") {
+    if (result === "happy" || result === "joyful") {
         happyInstaQuotes(); 
-    }else if(result === "sad") {
+    }else if(result === "sad" || result === "depressed") {
         sadInstaQuotes(); 
-    }else if (result === "love") {
+    }else if (result === "love" || result === "romantic") {
         romanticInstaQuotes(); 
     }else if (result === "funny") {
         funnyInstaQuotes(); 
+    }else {
+        document.getElementById("quote").innerHTML = "Erorr, not a valid input. Try a happy, funny or sad caption"
     }
 }
 
