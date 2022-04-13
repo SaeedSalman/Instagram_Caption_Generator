@@ -106,16 +106,23 @@ let quoteButton = document.querySelector("button");
 let speechButton = document.querySelector(".speech"); 
 let synth = speechSynthesis;
 let copyButton = document.querySelector(".copy"); 
+let instaButton = document.querySelector(".insta")
 
 // The SpeechSynthesisUtterance is a web speech API that represent a speech request
-speechButton.addEventListener("click", ()=>{
+speechButton.addEventListener("click", function(){
         let utterance = new SpeechSynthesisUtterance(`${quoteText.innerText}`);
         synth.speak(utterance);
         
 });
 
 //Function to copy quote into user's clipboard 
-copyButton.addEventListener("click", () => {
+copyButton.addEventListener("click", function(){
     //writeText() property writes the specified text string to the system clipboard
     navigator.clipboard.writeText(quoteText.innerText); 
-})
+});
+
+// Opens instagram on a new page when button is clicked 
+instaButton.addEventListener("click", function(){
+    let instagramURL = "https://www.instagram.com/?hl=en"; 
+    window.open(instagramURL, "_blank"); 
+}); 
